@@ -1,0 +1,29 @@
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  
+  &.MuiIconButton-root {
+    background-color: var(--theme-toggle-bg);
+    color: var(--theme-toggle-color);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: rotate(180deg);
+      background-color: var(--theme-toggle-hover-bg);
+    }
+  }
+}
+
+[data-theme='light'] {
+  --theme-toggle-bg: rgba(0, 0, 0, 0.05);
+  --theme-toggle-color: #1976d2;
+  --theme-toggle-hover-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --theme-toggle-bg: rgba(255, 255, 255, 0.05);
+  --theme-toggle-color: #90caf9;
+  --theme-toggle-hover-bg: rgba(255, 255, 255, 0.1);
+} 

@@ -1,0 +1,90 @@
+.movie-list {
+  .filters {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      max-width: 400px;
+    }
+
+    .type-select {
+      width: 120px;
+    }
+
+    .year-input {
+      width: 100px;
+    }
+
+    .search-button {
+      height: 56px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      
+      .search-input,
+      .type-select,
+      .year-input,
+      .search-button {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .grid-container {
+    padding: 0 60px;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .movie-card {
+    max-width: 240px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    .movie-poster {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .movie-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .movie-info {
+      font-size: 0.875rem;
+      margin-bottom: 4px;
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+} 
